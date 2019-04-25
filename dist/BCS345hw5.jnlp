@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="BCS345hw5.jar" size="2993" download="eager" />
+    <jar href="BCS345hw5.jar" size="6865" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="BCS345hw5" >
     <param name="requiredFXVersion" value="8.0+"/>
