@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="FXMLDocumentController">
+    <children>
+      <TextField fx:id="txtEmployeeID" layoutX="153.0" layoutY="69.0" prefWidth="200.0" />
+      <TextField fx:id="txtFirstName" layoutX="153.0" layoutY="104.0" prefWidth="200.0" />
+      <TextField fx:id="txtLastName" layoutX="153.0" layoutY="137.0" prefWidth="200.0" />
+      <TextField fx:id="txtMonth" layoutX="153.0" layoutY="170.0" prefHeight="25.0" prefWidth="30.0" />
+      <TextField fx:id="txtDay" layoutX="193.0" layoutY="170.0" prefHeight="25.0" prefWidth="30.0" />
+      <TextField fx:id="txtYear" layoutX="233.0" layoutY="170.0" prefHeight="25.0" prefWidth="50.0" />
+        <Label fx:id="label" layoutX="152.0" layoutY="119.0" minHeight="16" minWidth="69" />
+      <Label layoutX="81.0" layoutY="73.0" text="Employee ID" />
+      <Button fx:id="btnImport" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#importBtnClicked" prefHeight="25.0" prefWidth="112.5" text="Import" />
+      <TableView layoutX="28.0" layoutY="236.0" prefHeight="250.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="columnID" prefWidth="112.5" text="ID" />
+          <TableColumn fx:id="columnLastName" prefWidth="112.5" text="Last Name" />
+            <TableColumn fx:id="columnFirstName" prefWidth="112.5" text="First Name" />
+            <TableColumn fx:id="columnDate" prefWidth="112.5" text="Date of Hire" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAddEmployee" layoutX="153.0" layoutY="204.0" mnemonicParsing="false" onAction="#addEmployeeBtnClicked" prefHeight="25.0" prefWidth="200.0" text="Add Employee" />
+      <Label layoutX="81.0" layoutY="108.0" text="First Name" />
+      <Label layoutX="81.0" layoutY="141.0" text="Last Name" />
+      <Label layoutX="81.0" layoutY="174.0" text="Date" />
+      <Label layoutX="309.0" layoutY="174.0" text="MM / DD / YYYY" />
+      <Label layoutX="225.0" layoutY="170.0" text="/">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="185.0" layoutY="170.0" text="/">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
