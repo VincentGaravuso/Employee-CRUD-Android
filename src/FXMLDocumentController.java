@@ -1,9 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Vincent Garavuso - R01656356 - I certify that this is my own original work
  */
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -20,6 +20,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -101,18 +103,13 @@ public class FXMLDocumentController implements Initializable {
     }
 
     @FXML
-    private void importBtnClicked(ActionEvent event) {
+    private void addEmployeeBtnClicked(ActionEvent event) throws IOException {
 
-    }
-
-    @FXML
-    private void addEmployeeBtnClicked(ActionEvent event) {
-        
         lblError.setText("");
         lblSuccess.setText("Successfully Added");
         int empID = 0, year = 0, month = 0, day = 0;
         String fName = "", lName = "";
-        
+
         if (intValidation(txtEmployeeID) == true) {
             lblEmployeeID.setTextFill(Color.web("#000000"));
             recEmployeeID.setVisible(false);
@@ -180,7 +177,6 @@ public class FXMLDocumentController implements Initializable {
             }
 
         }
-        
 
     }
 
@@ -218,4 +214,10 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
+    @FXML
+    private void importBtnClicked(ActionEvent event) throws IOException
+    {
+        em.importer();
+        updateList();
+    }
 }
