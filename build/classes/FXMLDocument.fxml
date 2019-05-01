@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,8 +8,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="531.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
     <children>
+      <Rectangle fx:id="recEmployeeID" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutX="152.0" layoutY="68.0" stroke="RED" strokeType="INSIDE" visible="false" width="202.0" />
+      <Rectangle fx:id="recFirstName" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutX="152.0" layoutY="103.0" stroke="RED" strokeType="INSIDE" visible="false" width="202.0" />
+      <Rectangle fx:id="recLastName" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutX="152.0" layoutY="136.0" stroke="RED" strokeType="INSIDE" visible="false" width="202.0" />
+      <Rectangle fx:id="recMonth" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutX="152.0" layoutY="169.0" stroke="RED" strokeType="INSIDE" visible="false" width="32.0" />
+      <Rectangle fx:id="recDay" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutX="192.0" layoutY="169.0" stroke="RED" strokeType="INSIDE" visible="false" width="32.0" />
+      <Rectangle fx:id="recYear" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="27.0" layoutX="232.0" layoutY="169.0" stroke="RED" strokeType="INSIDE" visible="false" width="52.0" />
       <TextField fx:id="txtEmployeeID" layoutX="153.0" layoutY="69.0" prefWidth="200.0" />
       <TextField fx:id="txtFirstName" layoutX="153.0" layoutY="104.0" prefWidth="200.0" />
       <TextField fx:id="txtLastName" layoutX="153.0" layoutY="137.0" prefWidth="200.0" />
@@ -19,7 +26,7 @@
       <Label fx:id="lblEmployeeID" layoutX="81.0" layoutY="73.0" text="Employee ID" />
       <Button fx:id="btnAddEmployee" layoutX="153.0" layoutY="204.0" mnemonicParsing="false" onAction="#addEmployeeBtnClicked" prefHeight="25.0" prefWidth="200.0" text="Add Employee" />
       <Button fx:id="btnImport" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#importBtnClicked" prefHeight="25.0" prefWidth="112.5" text="Import" />
-      <TableView layoutX="28.0" layoutY="236.0" prefHeight="250.0" prefWidth="450.0">
+      <TableView fx:id="tbvEmployeeList" layoutX="28.0" layoutY="236.0" prefHeight="250.0" prefWidth="450.0">
         <columns>
           <TableColumn fx:id="columnID" prefWidth="112.5" text="ID" />
           <TableColumn fx:id="columnLastName" prefWidth="112.5" text="Last Name" />
@@ -39,6 +46,12 @@
       <Label layoutX="185.0" layoutY="170.0" text="/">
          <font>
             <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblError" alignment="TOP_LEFT" layoutX="28.0" layoutY="489.0" prefHeight="40.0" prefWidth="450.0" textFill="RED" wrapText="true" />
+      <Label fx:id="lblSuccess" alignment="CENTER" layoutX="150.0" layoutY="489.0" prefHeight="25.0" prefWidth="200.0" textAlignment="CENTER" textFill="#00b50f" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font>
       </Label>
     </children>

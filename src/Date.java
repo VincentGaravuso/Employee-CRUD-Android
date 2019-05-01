@@ -174,12 +174,15 @@ public class Date
         return ((d.day == this.day) && (d.month == this.month) && (d.year == this.year));
     }
     /**
-     * Returns formatted string of year, month and day respectively.
+     * Returns ISO formatted string of year, month and day respectively.
      * @return 
      */
-    @Override
-    public String toString()
+    public String getDateISO()
     {
-        return (getYear() + "-" + String.format("%02d", getMonth()) + "-" + String.format("%02d", getDay()));
+        return (getYear() + String.format("%02d", getMonth()) + String.format("%02d", getDay()));
+    }
+    public String getDate()
+    {
+        return (String.format("%02d", getMonth()) + "/" + String.format("%02d", getDay()) + "/" + getYear());
     }
 }

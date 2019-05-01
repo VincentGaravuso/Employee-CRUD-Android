@@ -69,9 +69,9 @@ public class Employee extends Person
      * Returns employees hire date
      * @return 
      */
-    public Date getHireDate()
+    public String getHireDate()
     {
-        return this.hireDate;
+        return this.hireDate.getDate();
     }
 
     /**
